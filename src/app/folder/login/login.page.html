@@ -1,0 +1,37 @@
+<ion-content class="ion-padding">
+  <div class="container" id="container">
+    <div class="form-container sign-in-container">
+      <form [formGroup]="signInForm" (ngSubmit)="onSignIn()">
+        <h1>Iniciar sesión</h1>
+        <span>o usa tu cuenta</span>
+        
+        <!-- Campo de email -->
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input formControlName="email" type="email"></ion-input>
+        </ion-item>
+        <div *ngIf="signInForm.get('email')?.invalid && signInForm.get('email')?.touched">
+          <small *ngIf="signInForm.get('email')?.errors?.['required']">El email es obligatorio</small>
+          <small *ngIf="signInForm.get('email')?.errors?.['email']">El email no es válido</small>
+        </div>
+
+        <!-- Campo de contraseña -->
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input formControlName="password" type="password"></ion-input>
+        </ion-item>
+        <div *ngIf="signInForm.get('password')?.invalid && signInForm.get('password')?.touched">
+          <small>La contraseña es necesaria</small>
+        </div>
+
+        <!-- Enlace para recuperar contraseña -->
+        <!-- <ion-item lines="none">
+          <ion-button fill="clear" (click)="onForgotPassword()">¿Olvidaste tu contraseña?</ion-button>
+        </ion-item> -->
+
+        <!-- Botón de inicio de sesión -->
+        <ion-button expand="block" type="submit" [disabled]="signInForm.invalid">Iniciar sesión</ion-button>
+      </form>
+    </div>
+  </div>
+</ion-content>

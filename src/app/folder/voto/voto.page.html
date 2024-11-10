@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Votar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title><h1 class="verificacion-titulo">Verificación de Identidad</h1></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p class="verificacion-instrucciones">
+        Para garantizar la seguridad y autenticidad de tu voto, realizaremos una verificación facial. Por favor, sigue las siguientes instrucciones para completar el proceso:
+      </p>
+      <ul class="verificacion-instrucciones">
+        <li>Asegúrate de estar en un lugar bien iluminado para que la cámara pueda capturar claramente tu rostro.</li>
+        <li>Coloca tu rostro frente a la cámara y asegúrate de que esté completamente visible.</li>
+        <li>No uses gafas de sol, sombreros, o cualquier accesorio que cubra tu rostro.</li>
+        <li>Mantén tu rostro alineado con la guía que aparecerá en pantalla.</li>
+        <li>Evita movimientos bruscos para asegurar una imagen nítida.</li>
+      </ul>
+      <p class="verificacion-instrucciones">Cuando estés listo/a, presiona el botón "Iniciar Verificación".</p>
+
+      <ion-button expand="block" (click)="iniciarVerificacion()">Iniciar Verificación</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

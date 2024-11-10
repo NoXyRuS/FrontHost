@@ -1,0 +1,30 @@
+.resumen-contenido {
+    display: flex;
+    align-items: center;
+  }
+  
+  ion-avatar {
+    margin-right: 15px;
+    height: 80px;
+    width: 80px;
+  }
+  
+  .resumen-info {
+    flex: 1;
+  }
+  
+  h2 {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  p {
+    margin: 0;
+    color: #666;
+  }
+  
+  .resumen-botones {
+    margin-top: 20px;
+  }
+  

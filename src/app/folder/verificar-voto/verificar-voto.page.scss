@@ -1,0 +1,28 @@
+.verificar-voto {
+    text-align: left; /* Alinear todo el texto a la izquierda */
+    padding: 16px; /* Espaciado interno */
+  }
+  
+  .verificar-titulo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center; /* Centrar solo el título */
+    margin-bottom: 10px; /* Margen inferior */
+  }
+  
+  .instrucciones {
+    font-size: 16px;
+    margin: 10px 0; /* Margen superior e inferior */
+    color: #333; /* Color del texto */
+  }
+  
+  ion-item {
+    margin-bottom: 16px; /* Espaciado entre el input y el botón */
+  }
+  
+  .verificacion-instrucciones {
+    font-size: 14px;
+    color: #666; /* Color más suave para las instrucciones */
+    margin-top: 20px; /* Margen superior */
+  }
+  

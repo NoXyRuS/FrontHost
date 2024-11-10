@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="selectedParty">{{ selectedParty.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="selectedParty">
+    <ion-item *ngFor="let candidate of candidates"> <!-- Cambia esto para usar candidates -->
+      <ion-label>
+        <h2>{{ candidate.nombres }} {{ candidate.apellidos }}</h2> <!-- Usa las propiedades correctas -->
+        <p>Categoría: {{ candidate.propuesta }}</p> <!-- Asegúrate de que esta propiedad sea la correcta -->
+        <p>{{ candidate.informacion }}</p> <!-- Usa la propiedad correcta -->
+        <a [href]="candidate.propuesta" target="_blank">Ver Propuestas</a> <!-- Asegúrate de que esta propiedad sea la correcta -->
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

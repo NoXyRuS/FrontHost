@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Resumen del Voto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Solo muestra si hay un candidato seleccionado -->
+  <ion-card *ngIf="candidatoSeleccionado">
+    <ion-card-header>
+      <ion-card-title>{{ candidatoSeleccionado.nombres }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="resumen-contenido">
+      <ion-avatar slot="start">
+        <!-- <img [src]="candidatoSeleccionado.imagen" alt="Imagen del candidato"> -->
+      </ion-avatar>
+      <div class="resumen-info">
+        <h2>{{ candidatoSeleccionado.nombres }}</h2>
+        <p>{{ candidatoSeleccionado.idPartido }}</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Botones de acción -->
+  <div class="resumen-botones">
+    <ion-button color="medium" expand="block" (click)="regresar()">Regresar</ion-button>
+    <ion-button color="primary" expand="block" (click)="confirmarVoto()">Confirmar Voto</ion-button>
+  </div>
+</ion-content>
+

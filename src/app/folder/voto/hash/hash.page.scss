@@ -1,0 +1,51 @@
+.voto-exitoso {
+    text-align: center;
+    margin-top: 150px; /* Aumenté el margen superior */
+  }
+  
+  .voto-exitoso-titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .imagen-agradecimiento {
+    width: 90px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    margin-top: 10px; /* Margen superior de la imagen */
+  }
+  
+  
+  .voto-exitoso-mensaje {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  .hash-card {
+    max-width: 700px; /* Ajusta el ancho máximo del card */
+    margin: 0 auto; /* Centra el card, si deseas que esté centrado */
+  }
+  
+  .hash-titulo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .hash-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.1rem;
+  }
+  
+  .hash-content ion-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .verificacion-instrucciones {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1rem;
+    color: #666;
+  }
+  

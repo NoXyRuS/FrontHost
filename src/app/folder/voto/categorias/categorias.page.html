@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Elección de Candidatos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        <h2>{{ tituloCategoria }}</h2>
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <!-- Agrupa los ion-radio dentro de ion-radio-group para que solo se seleccione uno -->
+        <ion-radio-group [(ngModel)]="candidatoSeleccionado" (ionChange)="verificarSeleccion($event.detail.value)">
+          <ion-item *ngFor="let candidato of candidatos">
+            <ion-avatar slot="start">
+              <!-- <img [src]="candidato.imagen" alt="{{ candidato.nombres }}"> -->
+            </ion-avatar>
+            <ion-label>
+              <h2>{{ candidato.nombres }}</h2>
+              <p>{{ candidato.idPartido }}</p>
+            </ion-label>
+            <ion-radio slot="end" [value]="candidato"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Botón deshabilitado si no hay un candidato seleccionado -->
+  <ion-button expand="block" [disabled]="!candidatoSeleccionado" (click)="siguienteCategoria()">Siguiente</ion-button>
+</ion-content>

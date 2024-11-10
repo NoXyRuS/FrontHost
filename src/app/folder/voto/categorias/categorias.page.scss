@@ -1,0 +1,30 @@
+ion-card-title h2 {
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  ion-item {
+    margin-bottom: 10px;
+  }
+  
+  ion-avatar img {
+    max-width: 100%;
+    border-radius: 50%;
+  }
+  
+  ion-button {
+    margin-top: 20px;
+  }
+  
+  ion-avatar {
+    height: 80px;  /* Aumenta el tamaño del avatar */
+    width: 80px;   /* Aumenta el tamaño del avatar */
+    overflow: hidden;  /* Asegura que la imagen no se salga del contenedor */
+  }
+  
+  ion-avatar img {
+    height: 100%;   /* Mantiene la imagen dentro del contenedor */
+    width: 100%;    /* Mantiene la imagen dentro del contenedor */
+    object-fit: cover;  /* Ajusta la imagen para llenar el contenedor manteniendo la proporción */
+    border-radius: 50%; /* Mantiene el borde redondeado */
+  }

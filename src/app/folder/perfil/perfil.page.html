@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil de Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="full-screen">
+  <div class="page-content">
+    <ion-card *ngIf="user" class="text-center">
+      <div class="profile-photo-container">
+        <img *ngIf="user.imagenFacial" [src]="'data:image/jpeg;base64,' + user.imagenFacial" alt="Imagen del usuario" class="perfil-imagen" />
+      </div>
+      <ion-card-header>
+        <ion-card-title>{{ user.nombres }} {{ user.apellidos }}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <div class="user-info">
+          <div class="document-type">
+            <p>N° de Documento</p>
+            <p>{{ user.dni }}</p>
+          </div>
+          <div class="document-number">
+            <p>Tipo de Documento</p>
+            <p>DNI</p>
+          </div>
+        </div>
+
+        <div class="birth-date-container">
+          <div class="birth-date">
+            <p>Fecha de Nacimiento</p>
+            <p>{{ user.fechaNacimiento }}</p>
+          </div>
+        </div>
+
+        <div class="birth-date-container">
+          <div class="birth-date">
+            <p>Correo Electrónico</p>
+            <p>{{ user.email }}</p>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngIf="!user" class="text-center">
+      <ion-card-header>
+        <ion-card-title>Cargando perfil...</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </div>
+</ion-content>

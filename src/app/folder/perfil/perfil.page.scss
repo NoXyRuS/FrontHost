@@ -1,0 +1,95 @@
+ion-content {
+  --padding-start: 0;
+  --padding-end: 0;
+  --padding-top: 0;
+  --padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente el contenido */
+  justify-content: center; /* Centra verticalmente el contenido */
+  padding: 16px; /* Espacio alrededor del contenido */
+}
+
+.perfil-imagen {
+  width: 100px; /* Tamaño de la imagen */
+  height: 100px; /* Tamaño de la imagen */
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  object-fit: cover; /* Mantiene la relación de aspecto al recortar la imagen */
+  margin-top: 20px;
+  margin-bottom: 10px; /* Espacio inferior para separar de otros elementos */
+}
+
+ion-card {
+  width: 100%; /* Asegura que la tarjeta ocupe todo el ancho disponible */
+  margin: 20px 0; /* Margen superior e inferior entre tarjetas */
+}
+
+.text-center {
+  text-align: center; /* Centra el texto dentro de la tarjeta */
+}
+
+.user-info {
+  display: flex; /* Usa Flexbox para alinear los elementos en línea */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten si no hay suficiente espacio */
+  justify-content: space-between; /* Espacio entre los elementos */
+  margin-top: 50px; /* Margen superior para separar del contenido anterior */
+}
+
+.document-type,
+.document-number {
+  flex: 1; /* Las columnas tomarán el mismo ancho */
+  min-width: 150px; /* Ancho mínimo para evitar que se encojan demasiado */
+  padding: 0 16px; /* Espaciado lateral para que no se peguen al borde */
+}
+
+/* Nueva clase para alinear la fecha de nacimiento con el documento */
+.birth-date-container {
+  display: flex; /* Usa flexbox para alinear elementos */
+  align-items: center; /* Centra verticalmente */
+  margin-top: 15px; /* Margen superior para separar de la sección anterior */
+}
+
+.birth-date {
+  text-align: left; /* Alinea el texto a la izquierda */
+  padding: 0 16px; /* Espacio lateral */
+}
+
+ion-card-content {
+  text-align: left; /* Alinea el contenido del ion-card a la izquierda */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .perfil-imagen {
+    width: 50px; /* Tamaño de la imagen en pantallas más pequeñas */
+    height: 50px; /* Tamaño de la imagen */
+  }
+
+  .user-info {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
+  }
+
+  .document-type,
+  .document-number {
+    width: 100%; /* Asegura que cada tipo ocupe el 100% del ancho */
+    margin: 5px 0; /* Espacio entre filas */
+  }
+
+  .birth-date {
+    width: 100%; /* Asegura que el dato de la fecha de nacimiento ocupe el 100% del ancho */
+  }
+}
+
+@media (max-width: 600px) {
+  .user-info {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas si es necesario */
+    align-items: flex-start; /* Alinea los elementos al inicio */
+  }
+}

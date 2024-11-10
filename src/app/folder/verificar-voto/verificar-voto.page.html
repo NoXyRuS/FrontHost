@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Verificar Voto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="verificar-voto">
+    <h1 class="verificar-titulo">Verificación de Voto</h1>
+    <h2 class="instrucciones">Ingresa el Hash de tu Voto</h2>
+    
+    <ion-item>
+      <ion-input [(ngModel)]="hashVoto" placeholder="Hash del Voto"></ion-input>
+    </ion-item>
+    
+    <ion-button expand="full" (click)="verificarVoto()">Verificar</ion-button>
+    
+    <p class="verificacion-instrucciones">
+      Asegúrate de que el hash sea correcto antes de verificar.
+    </p>
+  </div>
+</ion-content>

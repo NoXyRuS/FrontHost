@@ -1,2 +1,15 @@
-// For information on how to create your own theme, please see:
-// http://ionicframework.com/docs/theming/
+:root {
+    --color-light: #ffffff;
+    --color-medium-light: #84a98c;
+    --color-medium: #52796f;
+    --color-dark: #354f52;
+    --color-darker: #2f3e46;
+  
+    /* Opcionalmente, puedes asignar estos colores a las variables de Ionic */
+    --ion-color-primary: var(--color-medium-light);
+    --ion-color-secondary: var(--color-medium);
+    --ion-color-tertiary: var(--color-dark);
+    --ion-color-dark: var(--color-darker);
+    --ion-color-light: var(--color-light);
+  }
+  
