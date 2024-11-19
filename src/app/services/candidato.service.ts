@@ -7,7 +7,7 @@ import { Candidato } from '../models/candidato';
   providedIn: 'root',
 })
 export class CandidatoService {
-  private apiUrl = 'http://localhost:8080/api/candidatos'; // Cambia esto según la URL de tu API
+  private apiUrl = 'http://localhost:8081/api/candidatos'; // Cambia esto según la URL de tu API
 
   constructor(private http: HttpClient) {}
 

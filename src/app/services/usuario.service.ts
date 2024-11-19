@@ -8,7 +8,7 @@ import { tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class UsuarioService {
-  private apiUrl = 'http://localhost:8080/api/votantes'; // Cambia esto según tu API
+  private apiUrl = 'http://localhost:8081/api/votantes'; // Cambia esto según tu API
   private baseRec = 'http://localhost:5000';
   private userId: number | null = null;
   private user: UsuarioVotante | null = null;
