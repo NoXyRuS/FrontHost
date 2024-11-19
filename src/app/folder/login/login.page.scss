@@ -1,0 +1,88 @@
+/* Aseguramos que el ion-content ocupe toda la pantalla */
+ion-content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Contenedor que envuelve el ion-card */
+  .login-container {
+    width: 100%;
+    max-width: 500px; /* Establecemos un máximo de ancho para el contenedor */
+    margin: 0 auto; /* Centra el contenido */
+  }
+  
+  /* Estilo para el ion-card */
+  .login-card {
+    width: 50px; /* Asegura que el card ocupe todo el espacio disponible */
+    background: rgba(35, 43, 85, 0.8); /* Fondo con opacidad */
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    margin-left: 15px;  /* Márgenes laterales */
+    margin-right: 15px; /* Márgenes laterales */
+  }
+  
+  /* Contenedor interno para el formulario */
+  .form-inner-container {
+    width: 100%;
+  }
+  
+  /* Formulario */
+  .form-signin {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .form-signin label {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding-bottom: 10px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  ion-item {
+    margin-bottom: 10px;
+  }
+  
+  ion-input {
+    color: #ffffff;
+  }
+  
+  ion-button {
+    background-color: #1059FF;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 20px;
+    transition: all .3s ease;
+  }
+  
+  ion-button:disabled {
+    background-color: #ccc;
+  }
+  
+  ion-button:hover {
+    background-color: #0f4fe6;
+  }
+  
+  .forgot {
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .forgot a {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+    font-size: 13px;
+    text-decoration: none;
+  }
+  
+  .forgot a:hover {
+    text-decoration: underline;
+  }
+  

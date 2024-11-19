@@ -50,6 +50,7 @@ export class AppComponent implements OnInit {
   // Método para cargar los partidos y candidatos desde el servicio
   loadParties() {
     this.partidoService.getPartidos().subscribe(parties => {
+      // Crea una estructura para los partidos y candidatos
       const candidatosPage: AppPage = {
         title: 'Candidatos',
         url: '/folder/Inbox/candidatos',
@@ -57,6 +58,7 @@ export class AppComponent implements OnInit {
         parties: [], // Inicializa como un array vacío
       };
 
+      // Generar solicitudes para obtener los candidatos de cada partido
       const requests = parties.map((party: Partido) => {
         return this.getCandidatesForParty(party.idPartido).pipe(
           map(candidates => ({
@@ -68,9 +70,11 @@ export class AppComponent implements OnInit {
         );
       });
 
+      // Esperar a que todas las solicitudes se completen
       forkJoin(requests).subscribe(results => {
-        candidatosPage.parties = results; // Asigna el resultado a parties
+        candidatosPage.parties = results; // Asigna el resultado a 'parties'
         this.appPages.push(candidatosPage); // Agregar la página de candidatos al menú
+        // Forzar la actualización del menú después de cargar los partidos y candidatos
       });
     });
   }
