@@ -9,7 +9,7 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class PartidoService {
-  private apiUrl = 'https://api-fiskview-gycvaudsfjd0gfa6.brazilsouth-01.azurewebsites.net/api/partidos'; // Cambia esto según la URL de tu API
+  private apiUrl = 'http://localhost:8081/api/partidos'; // Cambia esto según la URL de tu API
 
   constructor(private http: HttpClient) {}
 

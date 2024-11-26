@@ -8,7 +8,7 @@ import { tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class UsuarioService {
-  private apiUrl = 'https://api-fiskview-gycvaudsfjd0gfa6.brazilsouth-01.azurewebsites.net/api/votantes'; // Cambia esto según tu API
+  private apiUrl = 'http://localhost:8081/api/votantes'; // Cambia esto según tu API
   private baseRec = 'http://localhost:5000';
   private userId: number | null = null;
   private user: UsuarioVotante | null = null;
@@ -34,6 +34,12 @@ export class UsuarioService {
 
   logBiometrico(base64Image: string): Observable<any> {
     return this.http.post<any>(`${this.baseRec}/log_biometrico`, { image: base64Image });
+  }
+
+  obtenerUsuarioId(): number | null {
+    // Aquí puedes obtener el ID del usuario desde localStorage o cualquier otra fuente
+    const storedUserId = localStorage.getItem('userId'); // Supongo que almacenas el ID en localStorage
+    return storedUserId ? parseInt(storedUserId, 10) : null;
   }
   
 }
