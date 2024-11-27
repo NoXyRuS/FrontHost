@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Clipboard } from '@angular/cdk/clipboard'; // Para copiar el hash
-import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { Clipboard } from '@angular/cdk/clipboard';
 
 @Component({
   selector: 'app-hash',
@@ -8,17 +8,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./hash.page.scss'],
 })
 export class HashPage implements OnInit {
+  hashVoto: string = '';
 
-  hashVoto: string = 'abc123def456ghi789'; // Simulación del hash
+  constructor(private route: ActivatedRoute, private clipboard: Clipboard) {}
 
-  constructor(private clipboard: Clipboard, private router: Router) {}
+  ngOnInit() {
+    // Obtener el hash desde los parámetros de la ruta
+    this.route.queryParams.subscribe((params) => {
+      this.hashVoto = params['hash'] || 'Hash no disponible';
+    });
+  }
 
   copiarHash() {
     // Copiar el hash al portapapeles
     this.clipboard.copy(this.hashVoto);
     alert('Hash copiado al portapapeles');
   }
-
-
-  ngOnInit() {}
 }

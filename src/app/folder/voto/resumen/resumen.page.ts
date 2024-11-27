@@ -41,22 +41,15 @@ export class ResumenPage implements OnInit {
     this.router.navigate(['/folder/Inbox/voto/categorias']);
   }
 
-  confirmarVoto() {
-    const votoData = {
-      id_usuario: this.usuarioId,
-      campana_id: 1, // Asumiendo que la campaña es conocida
-      candidato_id: this.candidatoSeleccionado?.idCandidato,
-      codigoHash: '1asddhhhsda', // Código hash vacío
-      fechaVoto: new Date().toISOString(), // Fecha actual
-    };
-
-    this.votoService.crearVoto(votoData).subscribe(
-      (respuesta) => {
-        console.log('Voto guardado:', respuesta);
-        this.router.navigate(['/folder/Inbox/voto/hash']); // Redirigir a la página de confirmación
+  realizarVoto(voto: any) {
+    this.votoService.registrarVoto(voto).subscribe(
+      (hash: string) => {
+        // Navegar a la página del hash con el valor recibido
+        this.router.navigate(['/hash'], { queryParams: { hash } });
       },
       (error) => {
-        console.error('Error al guardar el voto:', error);
+        console.error('Error al registrar el voto:', error);
+        alert('Hubo un problema al registrar tu voto.');
       }
     );
   }
