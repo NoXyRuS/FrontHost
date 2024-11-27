@@ -22,7 +22,7 @@ export class PartyService {
 
   // Método para obtener partidos y candidatos desde el backend
   getParties(): Observable<any> {
-    const url = 'http://localhost:8081/api/partidos'; // Cambia esta URL a la de tu backend
+    const url = 'http://134.209.74.110:8081/api/partidos'; // Cambia esta URL a la de tu backend
     return this.http.get<any>(url);
   }
 
