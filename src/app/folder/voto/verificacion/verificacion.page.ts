@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class VerificacionPage {
   // Nueva URL de Ngrok para el flujo de video
-  videoUrl: string = 'http://134.209.74.110/video_feed'; // URL del backend Flask
+  videoUrl: string = 'http://127.0.0.1:5000/video_feed'; // URL del backend Flask
 
   @ViewChild('videoElement', { static: false }) videoElementRef!: ElementRef;
 
@@ -31,7 +31,7 @@ export class VerificacionPage {
 
   iniciarVerificacion() {
     const verificarUsuario = setInterval(() => {
-      this.http.get('http://134.209.74.110/usuario_recibido')
+      this.http.get('http://127.0.0.1:5000/usuario_recibido')
         .subscribe(
           (respuesta: any) => {
             console.log(respuesta);  // Verificar que la respuesta es la esperada

@@ -14,4 +14,8 @@ export class VotoService {
   crearVoto(votoData: any): Observable<any> {
     return this.http.post<any>(this.apiUrl, votoData);
   }
+
+  obtenerHashVoto(transactionHash: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}/evento/${transactionHash}`);
+  }
 }
