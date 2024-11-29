@@ -13,7 +13,7 @@ export class VotoPage implements OnInit {
   iniciarVerificacion() {
     // Lógica para iniciar la verificación facial (más adelante)
     // Redirige a la siguiente pantalla de categorías
-    this.router.navigate(['/folder/Inbox/voto/verificacion']);
+    this.router.navigate(['/folder/Inbox/voto/cantegorias']);
   }
 
   ngOnInit() {
